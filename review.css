@@ -1,0 +1,319 @@
+/* =========================================================
+   FILE: review.css
+   PURPOSE:
+   Styles the Student Records System pages.
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   SECTION 1: Global Reset
+   --------------------------------------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------------------------------------------------------
+   SECTION 2: Root Variables
+   --------------------------------------------------------- */
+:root {
+    --bg: #f5f7fb;
+    --card: #ffffff;
+    --primary: #234e70;
+    --primary-dark: #16364d;
+    --accent: #2a9d8f;
+    --danger: #c0392b;
+    --success: #1e8449;
+    --text: #222;
+    --muted: #666;
+    --border: #d9e1ea;
+}
+
+/* ---------------------------------------------------------
+   SECTION 3: Page Base Styles
+   --------------------------------------------------------- */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+}
+
+/* ---------------------------------------------------------
+   SECTION 4: Header Styles
+   --------------------------------------------------------- */
+header {
+    background: var(--primary);
+    color: #fff;
+    padding: 1rem 1.5rem;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 0.3rem;
+}
+
+.user-badge {
+    font-size: 0.95rem;
+    opacity: 0.95;
+}
+
+/* ---------------------------------------------------------
+   SECTION 5: Navigation Styles
+   --------------------------------------------------------- */
+nav {
+    background: var(--primary-dark);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 0.9rem 1.2rem;
+    justify-content: center;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.55rem 0.9rem;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+/* ---------------------------------------------------------
+   SECTION 6: Main Layout
+   --------------------------------------------------------- */
+.page-main {
+    max-width: 1150px;
+    margin: 1.2rem auto;
+    padding: 0 1rem 2rem;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/* ---------------------------------------------------------
+   SECTION 7: Card Styles
+   --------------------------------------------------------- */
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.card h2,
+.card h3 {
+    margin-bottom: 0.8rem;
+    color: var(--primary);
+}
+
+.centered-card {
+    display: flex;
+    justify-content: center;
+}
+
+.narrow {
+    width: 100%;
+    max-width: 500px;
+}
+
+/* ---------------------------------------------------------
+   SECTION 8: Form Styles
+   --------------------------------------------------------- */
+label {
+    display: block;
+    margin: 0.7rem 0 0.25rem;
+    font-weight: bold;
+}
+
+.inputDesign-1,
+select,
+input[type="file"] {
+    width: 100%;
+    padding: 0.7rem 0.8rem;
+    border: 1px solid #c9d3df;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fff;
+}
+
+.inputDesign-2 {
+    margin-top: 1rem;
+    margin-bottom: 0.75rem;
+    padding: 0.9rem;
+    border: 1px solid #c9d3df;
+    border-radius: 10px;
+    background: #fbfdff;
+}
+
+legend {
+    padding: 0 0.3rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.inline {
+    display: block;
+    margin-bottom: 0.45rem;
+    font-weight: normal;
+}
+
+.input-color {
+    min-height: 44px;
+    padding: 0.25rem;
+}
+
+.form-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+/* ---------------------------------------------------------
+   SECTION 9: Button Styles
+   --------------------------------------------------------- */
+input[type="submit"],
+input[type="reset"],
+.btn-link {
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 8px;
+    background: var(--accent);
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.98rem;
+}
+
+input[type="reset"] {
+    background: #6c757d;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+.btn-link:hover {
+    opacity: 0.92;
+}
+
+/* ---------------------------------------------------------
+   SECTION 10: Helper Text and Flash Messages
+   --------------------------------------------------------- */
+.helper-text,
+.subtle {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+.flash {
+    padding: 0.9rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.flash.success {
+    background: #eafaf1;
+    color: var(--success);
+    border: 1px solid #bfe8cc;
+}
+
+.flash.error {
+    background: #fdecea;
+    color: var(--danger);
+    border: 1px solid #f5c6c1;
+}
+
+/* ---------------------------------------------------------
+   SECTION 11: Notes and Lists
+   --------------------------------------------------------- */
+.note {
+    margin-top: 1rem;
+    background: #f8fbff;
+    border: 1px solid var(--border);
+    padding: 0.9rem;
+    border-radius: 10px;
+}
+
+.note ol,
+.clean-list {
+    padding-left: 1.2rem;
+}
+
+/* ---------------------------------------------------------
+   SECTION 12: Table Styles
+   --------------------------------------------------------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.8rem;
+}
+
+table th,
+table td {
+    border: 1px solid var(--border);
+    padding: 0.7rem;
+    text-align: left;
+}
+
+table th {
+    background: #eef4fa;
+    color: var(--primary);
+}
+
+/* ---------------------------------------------------------
+   SECTION 13: Summary Box
+   --------------------------------------------------------- */
+.summary-box {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f8fbff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+/* ---------------------------------------------------------
+   SECTION 14: Footer
+   --------------------------------------------------------- */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--primary);
+    color: #fff;
+    margin-top: 2rem;
+}
+
+/* ---------------------------------------------------------
+   SECTION 15: Responsive Design
+   --------------------------------------------------------- */
+@media (max-width: 768px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        justify-content: flex-start;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+}
